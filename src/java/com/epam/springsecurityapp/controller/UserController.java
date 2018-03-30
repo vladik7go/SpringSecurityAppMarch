@@ -37,7 +37,7 @@ public class UserController {
             return "registration";
         }
         userService.save(userForm);
-        securityService.autologin(userForm.getUserName(), userForm.getPassword());
+        securityService.autologin(userForm.getUsername(), userForm.getPassword());
         return "redirect:/welcome";
     }
 
